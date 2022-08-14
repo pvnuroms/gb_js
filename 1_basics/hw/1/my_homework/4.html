@@ -29,6 +29,8 @@
 -->
   <script>
     "use strict";
+
+    //Не понял, как реализовать typehinting в js
     let orderNames = {
       0: 'единиц',
       1: 'десятков',
@@ -36,32 +38,31 @@
     }
     let inputValue = prompt('число покажи')
     let inputIntValue = +inputValue
-    if (isNaN(inputValue)) {
+    if (isNaN(inputIntValue)) {
       alert('Сам считай тогда')
     }
     else {
       let localText = ``
       let orderValue = 0
       let orderName = 0
-      while (inputIntValue > 0) {
+      while (inputIntValue > 0)
+      // Не понял, как несколько условий перечислить, наверное пройдем на следующих уроках, пока через break
+      // Наверняка есть аналоги enumerate/zip
+      {
         orderValue = inputIntValue % 10
         inputIntValue = Math.trunc(inputIntValue / 10)
         localText = `${orderNames[orderName]}: ${orderValue} , ${localText} `
         orderName += 1
-        if (orderNames[orderName] == undefined) {
+        if (orderNames[orderName] === undefined) {
           // let finalText = `В числе ${inputValue} количество ${localText}`
           // alert(finalText)
           break
         }
-
       }
       let finalText = `В числе ${inputValue} количество ${localText}`
-      alert(finalText)
+      alert(finalText.replace(/\s,\s+$/, ''))
+      // вместо strip похоже предлагается регулярки использовать, варварство просто
     }
-
-
-
-  // Здесь пишем решение, данный комментарий необходимо стереть.
   </script>
 </body>
 
