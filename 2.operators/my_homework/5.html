@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+    /**
+ * Сумма чисел
+ * @constructor
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} Сумма чисел a и b
+ **/
+  function uniqSum(a, b) {
+  return a + b;
+  }
+
+  /**
+ * Разность чисел
+ * @constructor
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} Разность большего и меньшего
+ **/
+  function uniqSubtract(a, b) {
+    if (a > b) {
+      return a - b;
+    } else if (b > a) {
+      return b - a;
+    } else return 0;
+  }
+
+/**
+ * Умножение чисел
+ * @constructor
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} Умножение чисел a и b
+**/
+  function uniqMult(a, b) {
+  return a * b;
+  }
+
+  /**
+ * Деление чисел
+ * @constructor
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} Деление чисел a и b
+**/
+  function uniqDiv(a, b) {
+  return a / b;
+  }
+
+/**
+ * Super Calculator
+ * @constructor
+ * @param {number} a
+ * @param {number} b
+ * @param {string} Оператор
+ * @returns {number} Может всё
+ **/
+  function mathOperation(a, b, operator) {
+  let operDict = {
+    '+': uniqSum,
+    '-': uniqSubtract,
+    '*': uniqMult,
+    ':': uniqDiv
+  };
+  let func = operDict[operator];
+  if (func === undefined) {
+    return NaN
+  } else {
+    return func(a, b)
+  }
+  }
+
+  // Some tests
+
+  console.log(mathOperation(8, 5, '+')); // 13
+  console.log(mathOperation(8, 5, '-')); // 3
+  console.log(mathOperation(8, 5, '*')); // 40
+  console.log(mathOperation(8, 5, ':')); // 1.6
+  console.log(mathOperation(8, 5, '(_*_)')); // NaN
+
+
+
+</script>
+</body>
+</html>
