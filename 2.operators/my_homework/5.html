@@ -34,7 +34,6 @@ Infinity делать не нужно, однако, в случае если б
 
     /**
  * Сумма чисел
- * @constructor
  * @param {number} a
  * @param {number} b
  * @returns {number} Сумма чисел a и b
@@ -45,7 +44,6 @@ Infinity делать не нужно, однако, в случае если б
 
   /**
  * Разность чисел
- * @constructor
  * @param {number} a
  * @param {number} b
  * @returns {number} Разность большего и меньшего
@@ -60,7 +58,6 @@ Infinity делать не нужно, однако, в случае если б
 
 /**
  * Умножение чисел
- * @constructor
  * @param {number} a
  * @param {number} b
  * @returns {number} Умножение чисел a и b
@@ -71,7 +68,6 @@ Infinity делать не нужно, однако, в случае если б
 
   /**
  * Деление чисел
- * @constructor
  * @param {number} a
  * @param {number} b
  * @returns {number} Деление чисел a и b
@@ -82,7 +78,6 @@ Infinity делать не нужно, однако, в случае если б
 
 /**
  * Super Calculator
- * @constructor
  * @param {number} a
  * @param {number} b
  * @param {string} Оператор
@@ -97,9 +92,9 @@ Infinity делать не нужно, однако, в случае если б
   };
   let func = operDict[operator];
   if (func === undefined) {
-    return NaN
+    return NaN;
   } else {
-    return func(a, b)
+    return func(a, b);
   }
   }
 
