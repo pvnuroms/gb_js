@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework_3_2</title>
+  <script type="text/javascript"
+    src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rlBYtUrMg03_t9LgQxnTap4nNnC0bZfOSM7c7MYf9Yh04Agn3vJSoDzKbkJjgo1Oz7QSjko2imaOsbqTcv4eTqu4wWSqSAASVAZGUN-shjxIlUHAh7r-q-PXcNArBIwq1Xf6Pfa_TRhO-_xg-o_FTGv0257sQ7MRS3IHRXSyh2orZVejuNlmqYVAbyx9gEl6an2_y3AQE6lPRyYY1fMRbe_IOAHjwWXN7XMMIGd1HTZeh94AfnZhCMx6wOg7LxlZKq78-CSXegRbVuvev7xpfG9l32mTAPOGje0XQ1-vCPk0ftt2i7HKXo9Sgg9m6U_4pTbhfHRGlZMAr6NUmnca5yYa1m9gOqDGUTE9GRNoixeNwwEEm1T7v2jl0QYYkr58_amrF70_b4f5y_ZgHlLB_cxiuu7vku_yaRDBf7XBGYSHfaZ2378nBisdvpU7lK1qqR7QyZRz5V6FAEgcb8ediEICaSTF1vQ5V81pxLXd9fnFQkkBqSvRIoH2_zcU50e8kKM3mHjrkA_vLi9UlWso19t6ddiH8ufraGpY6yq9CUYF-0l9Bd8sGwCO-iNdDiYiNldHhTK2ET-Ajfxzc-Zy2Jkp7ga_u8EzisOnIsfly2xvy4CcE1FAPnd2kg01fUbgyTzjaLMb_jmSZO6aZhARiP0Zk7pXoO6CvFsQLFnnL5gt8_Ed0WBb2Bfx6GG_hkgEbeSYOB1v3hv4nO9fjtdC3e1Q0aeN4o96ShdQwNmnSlU2IddMYp-l_d36gvIDZvuSlZ0MaWTBiFzg7l54rp7ViZWdbA8zzd_erTshJKX5m_p_V0dl1F6nb8t9TdhMb4JAR_YpSFgTUE8Cal7GYMdlDzF-4adxrQ7BLSoOkPQRHn1qGIZypYojVDgcDsqBpMUfgKyGud82o9c48uKW5Bhnan1Mgc6HAXBbQ7d9FiM_jyczveSgm874f01Fx0eu7dVvLuZG9GENUyNE7hYOWut6M--OemaSFmpsodqCjyDrNrG1RTf866w5J8Meu4vbAwAW4HkpBJiiEqPjnPFwPOHiDQPyLoz1_Ph_PHtycWIBoN8UhME6nHCMGeYJiaNgj-Q8NLIbnAAEpAQaUkW-c8hhjGEW4ZNSQkAPQEnwQ74aDApdS0K_wtBzSbV16JuMTcEn1EENKzt0GrHqvndTBX8B5YMEklBuXGHjReKCmV3UKpY"
+    charset="UTF-8"></script>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо из объекта, который лежит в константе post вывести значения, к
+которым приписан комментарий, в консоль.
+-->
+  <script>
+    "use strict";
+
+    const post = {
+      author: "John", // вывести этот текст
+      postId: 23,
+      comments: [
+        {
+          userId: 10,
+          userName: "Alex",
+          text: "lorem ipsum",
+          rating: {
+            likes: 10,
+            dislikes: 2, // вывести это число
+          },
+        },
+        {
+          userId: 5, // вывести это число
+          userName: "Jane",
+          text: "lorem ipsum 2", // вывести этот текст
+          rating: {
+            likes: 3,
+            dislikes: 1,
+          },
+        },
+      ],
+    };
+
+    console.log(`author: ${post.author}`);
+    console.log(`dislikes: ${post.comments[0].rating.dislikes}`);
+    console.log(`userId: ${post.comments[1].userId}`);
+    console.log(`text: ${post.comments[1].text}`);
+
+  //author: John
+  //dislikes: 2
+  //userId: 5
+  //text: lorem ipsum 2
+
+  </script>
+</body>
+
+</html>
