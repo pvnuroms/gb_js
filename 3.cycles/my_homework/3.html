@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework_3_3</title>
+  <script type="text/javascript"
+    src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yY8GLfp1h6NHmKW0mLgJn7fXFQ_TOCxOsUhaCAtsc7YY9DqYMiImFxsky4YwvOgdrAqw2GWvj2bAkSe9Pg5X7iZc0nsbqHhxFaEbz4fP3atwimDR_xUbWTRcjRGiPBh05fzpgLI4Mk5gbeyXhqMbYVMN5mZeOjpmWOh_PUSqaejh_Wc6x8_MlpMim60-DxF1s3byi9dbNEWqWG1neSQ_R4eqdhp0T0PMLUbs-EMoGsqFm5LPqs2t7L3SOCPl50ooYmbH5KyoyhHvf3dlpQ66OJd_lQSZJGECj5xmj5w_PYN6goglbF45jZalcP-FXJJHApYDWSwYZA16xF3niETP_dSY2SWKS7wNMRSOVnG7ao-4ZYf4qu2X2YHVdeOzMH00ASnPthRf-jG3vC0t1RCwK237ZZjLZ_QFmgtuis4khc3-1QhynBZ8sJXhTmjgZ5oF1daSt2iisOH5HFefeW050rWkIOlQIMlRrynqWfRloyKy01VeFe9jYGDJ_ukXIbarQk4jn51PUrvgAkXAtw9jPCfni_aBaLzlK_5YQTlYjjQw8pF7Ji0xN3v24df1YSashYeRTHAJpy4zoTQI8KedDON_KBhhfV1hPYZ_1H1_09pqRO35MmxjjteuhpH4LaArU5AkvvY2lYtgxsepOScGDvJjHIDKBarCvqlF4Uh6YR_FLsf9C39jicwHanfGJqyMkQ7LHdTBubt6kNNsytCNXUDx9j-T5Vso_J1UFQRuueZQYz2vcDLL2YBzDhwq_duZF0eq6ZmTqa4h9UVFC06NowpyBuFP8TRbf4n9dW6c4ziOKY7ebnKDmUNgy01moZfgLoQTPlDtk0KFDvQmgyWR7CCcGWCSyM-m8l-a7wlGSIc72aF4tKByWN5Btn_sYpImkFquU9HEkHDTY_AIfptBwXwiH_dC4Rh2mNmTmbMWthQsPcEfncVzXnFQv1ZG24nw49OGIYEea9RAjQB-lDpdMJX4eUTx7oJF67GAlUwYNRWxqVrB99GRoM9jWRDCKh74oGRNO3bMeEul72UlFCwbULy_FmP9qhPbqpAwFRycRVcHFoaFk_-26iv2nyASHYOGbBUNOdUIsavMSjlKWzUaeS6_2hrdif5wrgHqwlWz5SPI-RcpXavSHsyp1avvSLeLB_ItUs-p1P3W4VuYZhDNfHGpVi7JMRTJCKemISztv44"
+    charset="UTF-8"></script>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя
+метод forEach.
+-->
+  <script>
+    "use strict";
+
+    const products = [
+      {
+        id: 3,
+        price: 200,
+      },
+      {
+        id: 4,
+        price: 900,
+      },
+      {
+        id: 1,
+        price: 1000,
+      },
+    ];
+
+    for (const idx in products) {
+      console.log(`БЫЛО: ${products[idx].price}`)
+    }
+    products.forEach(function (item) {
+      item.price = Math.round(item.price - item.price * 0.15);
+    });
+
+    for (let count = 0; count < products.length; count++)
+      console.log(products[count]);
+
+
+  </script>
+</body>
+
+</html>

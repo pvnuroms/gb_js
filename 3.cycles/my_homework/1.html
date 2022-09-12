@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework_3_1</title>
+  <script type="text/javascript"
+    src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=OwesNCQp19IdzfwXUIvb-C93Aj3ytr2AxaX6DBGBmRzjzoDhK2F9RXJu5OOpLulIHZQCW-jUCpxM_aJMHnexnaf-YEBa8HCd43CxoOeox4NQCQbXudF1nLsn62zvsao8qdo4KHg5e0RdZzAHPsXz-Qp4nrJgk1Oskk3C8gZj6evccBhIRcs8DXJjVmIQfTpHr0wsr-tKhQSx_Ve9JHvMaoaNpuPKEIIppOvpmzsLkWXGz-rJAV7nN8bWNY7dZKDY4Wt6yxx6x2IpVzOImDRgGc7Wy9bYgAy0jlwSgJcojzNlsmUVjdWpPjlP7QrcIn2S88Xq3aAp7WtjFdGtf0h9TR1BJBJt5YL6-v6MBPTfgpPxlPng_kQoSKEvEL-neXuz7cxJHhj4sbTg2270Mi4uhcEudaQCKLY5OLCHc6u82tYaAp32iNZ4UKakKEBP8uEFYURXLk_fjWjThqSJ8VVKxRdm5-mGFOQ8Dq5B6yro7fSzQUUfqRpNnOy003xBZHRSe9ve31bwYXSlUdltZIz2JSTLes9wimwBo06JDNtUrfLzSria6xSqjuPBVQbrW2Az2vfJtfxq9DRhqTP3qCnlaoPDJtAUNIWCjZMTtAXQRKPBkahQI-BkVNL_o_wrZXsndbsA_eZHMK0IlSYM0wnWCH7lK5zeP82reZZ7I-I3AfDQZQOVJeq9dnyQqbJ3g7gI9tb6qufedMEsjaRMep5Zb7CnEDAjC5g_PxvZhR-7Z8yZECStCyfKu5D8ERfAiXBroHrfwHhHucSjfte3e2uCRi3Jq_YwIrlp0mPMhRI9H0_TkJTAkviD909j5cHJI8IO8YZUnw5Hy2oxP6kawKIoAUfetGf-X_nirGSuhz5XVo9VwEqOFKLOKX_EQ1XBC_kwmwmGBk1dZ9jX75mYq-Ot0HE8MbSrrWasInPNpwg8JOLXZsPgtslaJPugW54Zo4s23F40GA0oV9ZJatDyffPCAHU_k7zE61lZvyvNZfy8aGntXEqbBKJxZAYcdDARdoPnr-XWa5HsZap1wFjP293bP9BmIvozB3zi6TYqSBy-aXin-FItFbpAOA9Cx7QxTb8OI06EbDFVUIoEufUmoUkldVueRJcmpcbmeZWjaAZCqFeISDNcgs0IMKsEsrJaqdVhuqlI3bYRCNL7TfZsXSUu4V7d-Ga-vCuVktv350D75C4"
+    charset="UTF-8"></script>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+0 – это ноль
+1 – нечетное число
+2 – четное число
+3 – нечетное число
+…
+10 – четное число
+-->
+  <script>
+    "use strict";
+
+    /**
+     * Even checking
+     * @param {number} num
+     * @returns {bool} Может всё
+     **/
+    function isEven(a, operator) {
+      if (a === 0) {
+        return '– это ноль'
+      } else if (a % 2 > 0) {
+        return '– нечетное число'
+      } else if (a % 2 === 0) {
+        return '– четное число';
+      } else if (a % 2 === 0) {
+        return '– не число число';
+      };
+    }
+
+
+    for (var count = 0; count <= 10; count++)
+      console.log(`${count} ${isEven(count)}`);
+  </script>
+</body>
+
+</html>
