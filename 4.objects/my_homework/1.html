@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
+Необходимо создать функцию-конструктор/класс для продукта.
+Названия: `ProductES5` для es5 стиля, `ProductES6` для es6 стиля.
+При создании объекта от функции-конструктора/класса необходимо передавать имя
+и цену товара, эта информация должна быть сохранена в объекте.
+Также у объекта должна быть возможность выполнить метод `make25Discount`, данный
+метод должен уменьшать стоимость продукта на 25%.
+Необходимо продемонстрировать работу с объектом (в свободной форме).
+-->
+  <script>
+    "use strict";
+
+
+    /**
+     * Constructor for product objects
+     * @name {str} product name 
+     * @cost {number} product name 
+     * @constructor Product
+    **/
+    function oldProduct(name, cost) {
+      this.name = name;
+      this.cost = cost;
+    }
+
+    /**
+     * Метод для снижения цены товара
+     * @discount {number} product name 
+     * @returns
+    **/
+    oldProduct.prototype.makeDiscount = function (discount) {
+      const newCost = Math.round(this.cost - this.cost * discount / 100);
+      if (newCost.isNaN) {
+        return false;
+      };
+      this.cost = newCost;
+      return true;
+    };
+
+    const oldKolbasa = new oldProduct('kolbasa', 300);
+    oldKolbasa.makeDiscount(25);
+    console.log(oldKolbasa);
+
+    // -----------------------------------------
+
+    class Product extends oldProduct {
+
+      constructor(name, cost) {
+        super(name, cost);
+        // this.Constructor = Product я так понял не нужно для ES6
+      }
+    }
+
+    const sosich = new Product('kolbasa', 300);
+    sosich.makeDiscount(25);
+    console.log(sosich);
+
+  </script>
+</body>
+
+</html>
