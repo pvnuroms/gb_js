@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+  <style>
+    .product {
+      width: 200px;
+      padding: 10px;
+      float: left;
+      margin-right: 30px;
+      box-shadow: 0 0 4px black;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
+стирать, код с решением задачи пишем под комментарием.
+-->
+  <div class="product">
+    <div class="productName">Товар 1</div>
+    <img src="http://ecx.images-amazon.com/images/I/81LfHrQNE0L._SL1500_.jpg" width="50px" alt="">
+    <button>В корзину</button>
+  </div>
+  <div class="product">
+    <div class="productName">Товар 2</div>
+    <img src="https://i.ytimg.com/vi/XXkfzb_eEV4/maxresdefault.jpg" width="50px" alt="">
+    <button>В корзину</button>
+  </div>
+  <div class="product">
+    <div class="productName">Товар 3</div>
+    <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614543159_40-p-sobaki-na-belom-fone-53.png"
+      width="50px" alt="">
+    <button>В корзину</button>
+  </div>
+
+  <script>
+    "use strict";
+
+    const productElementNames = document.querySelectorAll('.productName');
+
+    /*
+    1. Установите всем элементам с классом "productName" размер шрифта 24px.
+     */
+
+
+    productElementNames.forEach(element => element.style.fontSize = '24px');
+
+
+    /*
+    2. Установите всем элементам с классом "product" внешний отступ справа 50px.
+     */
+
+    productElementNames.forEach(element => element.style.marginRight = '24px');
+
+    /*
+    3. При клике на кнопку "В корзину" название кнопки должно поменяться на
+    "Добавлено" и кнопка должна стать неактивной.
+     */
+
+    const buttonList = document.querySelectorAll('button')
+    buttonList.forEach(element => {
+      element.addEventListener('click', event => {
+        event.target.textContent = 'Добавлено';
+        // event.preventDefault();
+        element.disabled = true;
+      });
+    });
+
+    // Пример из решения ниже. Если я правильно понял, то тут не очень оптимально- идет перебор в цикле всех элементов документа и отработка только кнопок, документ ведь может быть большим?
+    // Или по факту без разницы?
+
+    // document.body.addEventListener('click', e => {
+    //   const button = e.target;
+    //   if (button.tagName !== "BUTTON") {
+    //     return;
+    //   }
+    //   button.textContent = 'Добавлено';
+    //   button.disabled = true;
+    // });
+
+    /*
+    4. Создайте полную (глубокую) копию элемента с классом product, измените в
+    этой копии путь до картинки на:
+    https://picsum.photos/id/1080/200/300
+    Поставьте название товара в данной копии "Товар 4" и замените последний
+    отображенный товар на странице на созданную копию. У данной копии также
+    должен правильно работать код из 3-го задания.
+     */
+
+    const productElements = document.querySelectorAll('.product')
+    const firstProductClone = productElements[0].cloneNode(true);
+
+    // У меня почему то недоступны картинки из задания, заменил их своими
+    // возможно ли в данном случае использовать именнованные аргументы, то есть что-то типа cloneNode(deep = true) вместо cloneNode(true), чтобы 
+    // улучшить читаемость и заодно с помощью зрительной памяти запоминать аргументы?
+
+    firstProductClone.querySelector('img').
+      src = 'https://www.kindpng.com/picc/m/575-5758722_dog-toys-brandypickle-com-tapete-gelado-pet-cool.png';
+    firstProductClone.querySelector('.productName').textContent = 'Товар 4';
+    productElements[productElements.length - 1].replaceWith(firstProductClone);
+
+    /*
+    5. По истечении 2 секунд с момента открытия страницы первый товар должен быть
+    удален из html.
+     */
+
+    setTimeout(() => productElements[0].remove(), 2000);
+
+  </script>
+</body>
+
+</html>
